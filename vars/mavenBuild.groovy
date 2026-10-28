@@ -1,4 +1,7 @@
-def call(String name = 'Ravi') {
-    echo "Hello ${name}"
-    echo "Welcome to Jenkins Shared Library Demo"
+def call() {
+    echo "Starting Maven build"
+
+    sh 'mvn clean package'
+
+    echo "Maven build completed"
 }
